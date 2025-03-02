@@ -3,8 +3,8 @@ import './style.css';
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 
-//const socket = io("https://socketssumi.herokuapp.com/");
-const socket = io("http://localhost:5000/");
+const socket = io("https://sumisocket-09b8a5415e59.herokuapp.com/");
+//const socket = io("http://localhost:5000/");
 
 const firebaseConfig = {
   apiKey: "AIzaSyAT8-lwq5e5nAjOKgAYb7JAH-fix4AayQ4",
