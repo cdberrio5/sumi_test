@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sumi friend</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    
+<script type="module" crossorigin src="/assets/index.f470d88f.js"></script>
+  <link rel="modulepreload" href="/assets/vendor.15b31224.js">
+  <link rel="stylesheet" href="/assets/index.152e15ec.css">
+</head>
+<body>
+    <div class="container h-100" id="createCall">
+        <div class="d-flex justify-content-center h-100">
+            <div class="user_card">
+                <h5 class="user_title_card">Iniciar sesion</h5>
+                <div class="d-flex justify-content-center form_container">
+                    <form>
+                        <div class="input-group mb-3">
+                            <div class="input-group-append">
+                                <span class="input-group-text"><i class="fa-solid fa-language"></i></span>
+                            </div>
+
+                            <select name="" id="select_language" class="form-select input_pass">
+                                <option selected value="">Seleccionar idioma</option>
+                            </select>
+                        </div>  
+                        <div class="input-group mb-3">
+                            <div class="input-group-append">
+                                <span class="input-group-text"><i class="fa-solid fa-earth-americas"></i></span>
+                            </div>
+
+                            <select name="" class="form-select input_pass" id="select_dialect">
+                                <option selected value="">Seleccionar Pais</option>
+                            </select>
+                        </div> 
+                        <div class="d-flex justify-content-center mt-3 login_container">
+                            <button type="button" name="button" class="btn login_btn" id="savelanguage">Guardar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="stablishCall" class="container-central dontshow">
+        <div class="container-left">
+            <video id="remoteVideo" autoplay playsinline></video>
+            <div class="subtitles">
+
+                <div class="button-video" style="margin-right: 0px;" id="cancelVideo">
+                    <div>
+                        <i class="fa-solid fa-video"></i>
+                    </div>
+                </div>
+                <div class="button-video" style="margin-right: 0px;" id="enableVideo" hidden="true">
+                    <div>
+                        <i class="fa-solid fa-video-slash"></i>
+                    </div>
+                </div>
+                <div class="button-mic" style="margin-right: 30px; margin-left: 30px;" id="cancelMic">
+                    <div>
+                        <i class="fa-solid fa-microphone-lines"></i>
+                    </div>
+                </div>
+                <div class="button-mic" style="margin-right: 30px; margin-left: 30px;" id="enableMic" hidden="true">
+                    <div>
+                        <i class="fa-solid fa-microphone-lines-slash"></i>
+                    </div>
+                </div>
+                <div class="button-call" style="margin-left: 0px;" id="cancelCall">
+                    <div>
+                        <i class="fa fa-phone"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="chatmobile" id="chatmobile">
+            </div>
+            <div class="myVideo">
+                <video id="webcamVideo" autoplay playsinline muted></video>
+            </div>
+        </div>
+
+        <div class="shared-link-mobile">
+            <div class="icon" id="sharemobile">
+                <div>
+                    <i class="fa fa-share-square"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-right">
+            <div class="container-shared">
+                <div class="icon" id="share">
+                    <div>
+                        <i class="fa fa-share-square"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="container-chat" id="chat">
+
+            </div>
+            <div class="container-sendmsg">
+                <div>
+                    <input type="text" id="textmsg" placeholder="Escribe un mensaje aqui">
+                </div>
+                <div>
+                    <button id="sendMessage"><i class="fa fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="loadermodal" id="loader" hidden="true">
+        <div class="loader"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdn.socket.io/4.4.0/socket.io.min.js" integrity="sha384-1fOn6VtTq3PWwfsOrk45LnYcGosJwzMHv+Xh/Jx5303FVOXzEnw0EpLv30mtjmlj" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/18205a8366.js" crossorigin="anonymous"></script>
+    
+
+  </body>
+</html>

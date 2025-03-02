@@ -2,7 +2,8 @@
   "name": "sumi",
   "version": "1.0.0",
   "scripts": {
-    "start": "vite"
+    "start": "node index.js",
+    "build": "vite build"
   },
   "dependencies": {
     "firebase": "^8.10.1",
